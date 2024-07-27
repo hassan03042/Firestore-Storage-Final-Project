@@ -1,0 +1,125 @@
+
+
+/* Navbar styling */
+nav {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+.navbar-logo img {
+    height: 40px;
+}
+
+.navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+.navbar-links a:hover {
+    text-decoration: underline;
+}
+
+#logout_btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#logout_btn:hover {
+    background-color: #0056b3;
+}
+
+/* Event card styling */
+.event-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 350px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.event-card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.event-card-content {
+    padding: 20px;
+}
+
+.event-title {
+    margin: 0 0 10px;
+    font-size: 22px;
+    color: #333;
+}
+
+.event-description {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: #555;
+}
+
+.event-time, .event-creator, .event-location {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #666;
+}
+
+.event-time::before {
+    content: "📅 ";
+}
+
+.event-creator::before {
+    content: "👤 ";
+}
+
+.event-location::before {
+    content: "📍 ";
+}
+
+/* Body and other content styling */
+body {
+    font-family: Arial, sans-serif;
+    padding-top: 60px; /* Space for the fixed navbar */
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
