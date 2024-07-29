@@ -12,6 +12,9 @@ login_form.addEventListener("submit", function (e) {
 
   signInWithEmailAndPassword(auth, email, password)
     .then(() => {
+      submit_btn.disabled = true;
+      submit_btn.innerText = "PLEASE WAIT...";
+      submit_btn.style.cursor = "not-allowed";
       window.location.href = "/";
     })
     .catch((err) => alert(err));

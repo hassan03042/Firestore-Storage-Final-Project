@@ -28,7 +28,7 @@ onAuthStateChanged(auth, (user) => {
     user_img.style.display = "inline-block";
     getUserInfo(uid);
   } else {
-    //  window.location.href = '/auth/login/index.html';
+     window.location.href = '/auth/login/index.html';
     login_link.style.display = "inline-block";
     user_img.style.display = "none";
   }
