@@ -36,8 +36,9 @@ signup_user_btn.addEventListener("submit", function (e) {
   };
 
   //create Account
-  submit_btn.disabled = true
-  submit_btn.innerText = "PLEASE WAIT..."
+  submit_btn.disabled = true;
+  submit_btn.innerText = "PLEASE WAIT...";
+  submit_btn.style.cursor = "not-allowed";
   createUserWithEmailAndPassword(auth, email, password)
     .then((user) => {
       console.log(user);
@@ -54,35 +55,35 @@ signup_user_btn.addEventListener("submit", function (e) {
             .then((url) => {
               console.log("Url AAGAYA BHAI", url);
 
-
               //update user info object
-              userInfo.img = url
+              userInfo.img = url;
 
               //created user document reference
-              const userdbRef = doc(db, "users",user.user.uid)
+              const userdbRef = doc(db, "users", user.user.uid);
 
               //set this document to db
-              setDoc(userdbRef, userInfo).then(()=>{
+              setDoc(userdbRef, userInfo).then(() => {
                 console.log("user info added to db");
                 window.location.href = "/";
-                submit_btn.disabled = false
-                submit_btn.innerText = "Submit"
-              })
+                submit_btn.disabled = false;
+                submit_btn.innerText = "Submit";
+              });
             })
             .catch((err) => {
               console.log("Url Nhi AAya Bhai Galti Hogayiii");
-              submit_btn.disabled = false
-                submit_btn.innerText = "Submit"
+              submit_btn.disabled = false;
+              submit_btn.innerText = "Submit";
             });
         })
         .catch(() => {
           console.log("Error In Uploading Image");
-          submit_btn.disabled = false
-                submit_btn.innerText = "Submit"
+          submit_btn.disabled = false;
+          submit_btn.innerText = "Submit";
         });
     })
-    .catch((err) => {alert(err), (submit_btn.disabled = false); 
+    .catch((err) => {
+      alert(err), (submit_btn.disabled = false);
       submit_btn.innerText = "Submit";
-});
+    });
   //  console.log(userInfo);
 });

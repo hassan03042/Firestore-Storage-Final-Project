@@ -1,55 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Firestore And Storage</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
-    href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css"
-    rel="stylesheet"
-  />
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  
-<nav class="bg-white border-gray-200 dark:bg-gray-900" style="position: fixed !important;">
-  <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
-      <a href="https://flowbite.com" class="flex items-center space-x-3 rtl:space-x-reverse">
-          <img src="https://static.vecteezy.com/system/resources/thumbnails/000/584/116/small/002-03.jpg" class="h-8" id="navImage" alt="Flowbite Logo" />
-          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">My Events</span>
-      </a>
-      <div class="flex items-center space-x-6 rtl:space-x-reverse">
-          <a href="tel:5541251234" class="text-sm  text-gray-500 dark:text-white hover:underline">(555) 412-1234</a>
-          <a href="/auth/createEvent/index.html" class="text-sm font-bold text-black-500 dark:text-white hover:underline">Create Event</a>
-          
-          <a href="/profile/index.html"><img src="https://img.freepik.com/free-photo/portrait-successful-young-african-businessman-holding-disposable-coffee-cup-newspaper-digital-tablet_23-2148190728.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1720569600&semt=ais_hybrid"
-          class="w-10 h-10 rounded-full"
-          style="display: none;"
-          id="user_img"
-          alt="" srcset=""></a>
+      href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav
+      class="bg-white border-gray-200 dark:bg-gray-900"
+      style="position: fixed !important"
+    >
+      <div
+        class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4"
+      >
+        <a
+          href="https://flowbite.com"
+          class="flex items-center space-x-3 rtl:space-x-reverse"
+        >
+          <img
+            src="https://static.vecteezy.com/system/resources/thumbnails/000/584/116/small/002-03.jpg"
+            class="h-8"
+            id="navImage"
+            alt="Flowbite Logo"
+          />
+          <span
+            class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+            >Events</span
+          >
+        </a>
+        <div class="flex items-center space-x-6 rtl:space-x-reverse">
+          <a
+            href="/myEvents/index.html"
+            class="text-sm text-gray-500 dark:text-white hover:underline"
+            >My Events</a
+          >
+          <a
+            href="/auth/createEvent/index.html"
+            class="text-sm font-bold text-black-500 dark:text-white hover:underline"
+            >Create Event</a
+          >
 
-          
-          
-          <a href="/auth/login/index.html" id="login_link" class="text-sm  text-blue-600 dark:text-blue-500 hover:underline">Login</a>
+          <a href="/profile/index.html"
+            ><img
+              src="https://static.thenounproject.com/png/1095867-200.png"
+              class="w-10 h-10 rounded-full"
+              style="display: none"
+              id="user_img"
+              alt=""
+              srcset=""
+          /></a>
+
+          <a
+            href="/auth/login/index.html"
+            id="login_link"
+            class="text-sm text-blue-600 dark:text-blue-500 hover:underline"
+            >Login</a
+          >
+        </div>
       </div>
-  </div>
-</nav>
+    </nav>
 
-<div>
-            <div id="events_card_container" style="display: flex; flex-wrap: wrap; gap: 40px;">
-              
-            </div>
-            <div class="flex justify-center items-center">
-
-              <button id="logout_btn">Logout</button>
-            </div>
-          </div>
-
-
+    <div>
+      <div
+        id="events_card_container"
+        style="display: flex; flex-wrap: wrap; gap: 40px"
+      ></div>
+      <div class="flex justify-center items-center">
+        <button id="logout_btn">Logout</button>
+      </div>
+    </div>
 
     <script src="script.js" type="module"></script>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
-
-</body>
+  </body>
 </html>
